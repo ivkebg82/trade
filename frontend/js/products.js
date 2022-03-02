@@ -96,3 +96,4 @@ function makeFilter() {
     } = this
     type === 'range' ? console.log('this is range') : console.log('kjllj')
 }
+console.log('change')
