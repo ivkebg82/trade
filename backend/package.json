@@ -1,0 +1,18 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.8",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "nodemon main.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

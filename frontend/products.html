@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./scss/products.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--SEARCH WRAPPER-->
+    <div class="search_wrapper">
+      <input
+        type="text"
+        class="search"
+        style="font-family: FontAwesome"
+        placeholder="  search"
+      />
+      <i class="fas fa-list-ul"><span>Filter</span></i>
+    </div>
+    <!---END OF SEARCH WRAPPER-->
+
+    <div class="container"></div>
+    <div class="filter_menu">
+      <div class="select">
+        <h4>Choose filter</h4>
+        <select name="" id="main_select">
+          <option value="name">name</option>
+          <option value="type">type</option>
+          <option value="price">price</option>
+        </select>
+      </div>
+      <!--filter type div who holds all filters-->
+      <div class="filter_type">
+        <input type="range" class="filter price" />
+        <input type="text" class="filter name" />
+        <div class="filter type discount_wrapper">
+          <input type="checkbox" class="type" /><span
+            >products with discount</span
+          >
+        </div>
+      </div>
+    </div>
+    <!--  load data
+      <div class="wrapper">
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <div class="img-wrapper"><img src="" /></div>
+    </div> 
+  -->
+    <script
+      src="https://kit.fontawesome.com/b449462db0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/products.js" type="module"></script>
+  </body>
+</html>

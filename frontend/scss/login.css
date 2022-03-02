@@ -1,0 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: lightgrey;
+}
+
+body h1 {
+  margin-bottom: 50px;
+  font-family: Georgia, Times New Roman, Times, serif;
+  font-size: 3.5rem;
+  color: violet;
+}
+
+.forms_wrapper {
+  width: 400px;
+  height: 500px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.forms_wrapper .signup_wrapper, .forms_wrapper .login_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  -webkit-box-shadow: 10px 5px 5px 3px gray;
+          box-shadow: 10px 5px 5px 3px gray;
+}
+
+.forms_wrapper .signup_wrapper h4, .forms_wrapper .login_wrapper h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  color: violet;
+}
+
+.forms_wrapper .signup_wrapper input, .forms_wrapper .login_wrapper input {
+  display: block;
+  margin: 20px 0;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.forms_wrapper .signup_wrapper button, .forms_wrapper .login_wrapper button {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+}
+
+.forms_wrapper .signup_wrapper button:hover, .forms_wrapper .login_wrapper button:hover {
+  cursor: pointer;
+  background-color: violet;
+  color: white;
+  padding: 7px;
+}
+
+.forms_wrapper .signup_wrapper {
+  background-color: black;
+}
+
+.forms_wrapper .login_wrapper {
+  background-color: black;
+  display: none;
+}
+
+.choose_signup {
+  width: 90%;
+  height: 10px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.choose_signup .leftLine {
+  width: 45px;
+  height: 1px;
+  background-color: blueviolet;
+}
+
+.choose_signup .rightLine {
+  width: 45px;
+  height: 1px;
+  background-color: blueviolet;
+}
+
+.choose_signup p {
+  position: absolute;
+  top: -10px;
+  left: 55px;
+  color: violet;
+}
+
+.choose_signup p:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.choose_login {
+  width: 100%;
+  height: 10px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.choose_login .leftLine {
+  width: 45px;
+  height: 1px;
+  background-color: blueviolet;
+}
+
+.choose_login .rightLine {
+  width: 45px;
+  height: 1px;
+  background-color: blueviolet;
+}
+
+.choose_login p {
+  position: absolute;
+  top: -10px;
+  color: violet;
+}
+
+.choose_login p:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show {
+  background-color: blue;
+}
+/*# sourceMappingURL=login.css.map */

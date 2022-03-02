@@ -1,0 +1,209 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+/*SERACH WRAPPER*/
+.search_wrapper {
+  width: 100%;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  margin: 20px 0 0 0;
+  border-bottom: 1px solid lightgray;
+}
+
+.search_wrapper .search {
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid lightskyblue;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+.search_wrapper .fas {
+  padding: 10px;
+  color: grey;
+  font-size: 1.3rem;
+}
+
+.search_wrapper .fas span {
+  padding: 0 10px;
+  color: lightskyblue;
+}
+
+.search_wrapper .fas:hover {
+  cursor: pointer;
+}
+
+/*END SEARCH WRAPPER*/
+/*MAIN CONTAINER*/
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+  overflow: hidden;
+  background-color: lightgrey;
+}
+
+/*END MAIN CONTAINER*/
+/*CARD WRAPPER*/
+.wrapper {
+  width: 250px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: transparent;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.wrapper .img-wrapper {
+  width: 150px;
+  height: 150px;
+}
+
+.wrapper .img-wrapper img {
+  width: 100%;
+}
+
+/*END CARD WRAPPER*/
+.show {
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.hidden {
+  -webkit-transform: translateX(-270px);
+          transform: translateX(-270px);
+  opacity: 0;
+}
+
+/*FILTER MENU---------*/
+.filter_menu {
+  top: 55px;
+  left: 0;
+  width: 250px;
+  height: 50%;
+  position: absolute;
+}
+
+.filter_menu .select {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.filter_menu .select #main_select {
+  width: 50%;
+  outline: none;
+  padding: 5px;
+  position: absolute;
+}
+
+.filter_menu .select h4 {
+  position: absolute;
+  left: 25%;
+  top: 10px;
+  font-size: 1.3rem;
+}
+
+.filter_menu .filter_type {
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  left: 0;
+  top: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter_menu .filter_type .filter {
+  position: absolute;
+}
+
+.filter_menu .filter_type .discount_wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.filter_menu .filter_type .discount_wrapper span {
+  margin-left: 10px;
+}
+
+.filter_menu::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.6;
+  position: absolute;
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 5px 5px grey;
+          box-shadow: 10px 5px 5px grey;
+}
+
+/*END FILTER MENU*/
+/*# sourceMappingURL=products.css.map */
