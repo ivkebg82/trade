@@ -24,7 +24,13 @@ const UserSchema = new mongoose.Schema({
                     throw new Error('Password canot contains paswword!')
                 }
             }
-        }
+        },
+        tokens: [{
+            token: {
+                type: String,
+                requiredPaths: true
+            }
+        }]
     }
 
 );
@@ -51,6 +57,8 @@ UserSchema.statics.findByCredentials = async (email, password) => {
     }
     console.log(rightUser)
 }
+
+
 
 const UserModel = mongoose.model('User', UserSchema);
 
