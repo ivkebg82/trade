@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
-
+const jwt = require('jsonwebtoken')
 const UserSchema = new mongoose.Schema({
         email: {
             type: String,
@@ -53,13 +53,27 @@ UserSchema.statics.findByCredentials = async (email, password) => {
         password: password
     })
     if (!rightUser) {
-        throw new Error('Invalid password!')
+        throw new Error('error')
+    } else {
+        return rightUser
     }
-    console.log(rightUser)
+
 }
 
 
+UserSchema.methods.generateAuthToken = async function () {
+    const user = this
+    const token = jwt.sign({
+        _id: user._id.toString()
+    }, "anabolik82")
 
+    user.tokens = user.tokens.concat({
+        token
+    })
+    await user.save()
+
+    return token
+}
 const UserModel = mongoose.model('User', UserSchema);
 
 module.exports = UserModel

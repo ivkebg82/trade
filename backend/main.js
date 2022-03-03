@@ -14,7 +14,7 @@ const port = process.env.PORT || 3000;
 
 app.get('/data', async (req, res) => {
     const products = await Product.find({})
-    console.log(products)
+
     res.send(products)
 })
 
@@ -38,9 +38,16 @@ app.post('/users', async (req, res) => {
         email: req.query.email,
         password: req.query.password
     });
+
     try {
+
         await user.save()
-        console.log(user)
+        const token = user.generateAuthToken()
+        res.status(201).send({
+            user,
+            token
+        })
+
 
     } catch (e) {
         console.log(e)
@@ -49,10 +56,13 @@ app.post('/users', async (req, res) => {
 
 })
 
+app.get('/logIn', async (req, res) => {
+    const user = await User.findByCredentials(req.query.email, req.query.password)
+    if (user) {
+        res.send(user)
+    }
 
+})
 app.listen(port, () => {
     console.log('Listening for requests...')
 })
-
-//hello
-//fdsfsdfsdf

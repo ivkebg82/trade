@@ -17,8 +17,17 @@ signUpForm.addEventListener('submit', (e) => {
     if (!signUpEmail || !signUpPassword) {
         console.log('YOU MUST ENTER EMAIL AND PASSWORD')
     } else {
-
         fetch(`http://localhost:3000/users?email=${signUpEmail}&password=${signUpPassword}`, requestOptions)
+            .then(data => {
+                const res = data.json().then(result => {
+                    if (!result) {
+                        return
+                    } else {
+                        window.location.href = "products.html"
+                    }
+                })
+            })
+
     }
 })
 
@@ -30,11 +39,21 @@ signUpText.addEventListener('click', () => {
     signUpWrapper.style.opacity = '1'
     logInWrapper.style.display = 'none'
 })
-logInForm.addEventListener('submit', () => {
+logInForm.addEventListener('submit', function (e) {
+    e.preventDefault()
     const loginEmail = document.querySelector('.login_email').value
     const loginPassword = document.querySelector('.login_password').value
+    if (!loginEmail || !loginPassword) {
+        console.log('Type username and password!!')
 
-    fetch(`http://localhost:3000/logIn?email=${loginEmail}&password=${loginPassword}`)
+    } else {
+        fetch(`http://localhost:3000/logIn?email=${loginEmail}&password=${loginPassword}`)
+            .then(data => data.json()).then(res => {
+                if (res) {
+                    window.location.href = 'products.html'
+                }
+            })
+
+    }
+
 })
-//sdaddsad
-//fdsfsfd
