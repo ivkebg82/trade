@@ -16,6 +16,7 @@ const allFilters = document.querySelectorAll('input')
 
 methods.getData(container)
 
+
 search.addEventListener('input', (e) => {
     let value = e.target.value
     data = methods.data;

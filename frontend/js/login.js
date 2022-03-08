@@ -47,7 +47,7 @@ logInForm.addEventListener('submit', function (e) {
         console.log('Type username and password!!')
 
     } else {
-        fetch(`http://localhost:3000/logIn?email=${loginEmail}&password=${loginPassword}`)
+        fetch(`http://localhost:3000/logInChrome?email=${loginEmail}&password=${loginPassword}`, requestOptions)
             .then(data => data.json()).then(res => {
                 if (res) {
                     window.location.href = 'products.html'

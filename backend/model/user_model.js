@@ -28,7 +28,7 @@ const UserSchema = new mongoose.Schema({
         tokens: [{
             token: {
                 type: String,
-                requiredPaths: true
+                required: true
             }
         }]
     }
